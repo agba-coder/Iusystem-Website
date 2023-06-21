@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} Our Team {% endblock %}
+
+{% block content %}
+
+        <section class="bg-white">
+            <div class="grid py-8 px-4 mx-auto max-w-screen-xl lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+                <div class="place-self-center mr-auto lg:col-span-7 slide-in">
+              <h1 class="mb-4 max-w-2xl text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl dark:text-white content-team-h1">Meet the team</h1>
+              <p class="mb-6 max-w-2xl font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400 content-team-p"> A balanced team of experienced and budding engineers who stop  at
+              nothing to ensure your businesss gets the best IT solution possible</p>
+          </div>
+          <div class="lg:mt-0 lg:col-span-5 lg:flex slide-in">
+            <img src="{% static 'img/team_page.svg' %}" alt="mockup">
+          </div>
+              </div>
+          </div>
+        </section>
+    <section class="">
+            <div class="team-row">
+            <div class="team-member">
+              <img src="{% static 'img/male_avatar.svg' %}"  alt="image">
+              <div class="member-name">Temitope Moses</div>
+              <div class="member-title">Principal Consultant</div>
+            </div>
+            
+            <div class="team-member">
+              <img src="{% static 'img/male_avatar.svg' %}" class="" alt="" width="200" height="200"/>
+              <div class="member-name">Alhamdu Tanko</div>
+              <div class="member-title">External Consultant</div>
+            </div>
+            <div class="team-member" >
+              <img src="{% static 'img/male_avatar.svg' %}" class="" alt="" width="200" height="200">
+              <div class="member-name">Omeonu Nnadozie</div>
+              <div class="member-title">Software Engineer</div>
+            </div>
+            <div class="team-member">
+              <img src="{% static 'img/male_avatar.svg' %}" class=""  alt="" width="200" height="200">
+              <div class="member-name">Patrick Aziken</div>
+              <div class="member-title">IT Manager</div>
+            </div>
+    </div>
+    </section>
+    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      
+{% endblock %}

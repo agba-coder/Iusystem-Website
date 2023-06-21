@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %} Complete Registration {% endblock %}
+
+{% block content %}
+
+
+<div>
+    <h1 class="competition-h1"> iuSystem Africa Competition</h1>
+    <br/>
+    <h4 class="competition-h"> Kindly read through this piece of information before proceeding! </h3>
+    <br/>
+    <p class="competition-p"> iuSystem Africa Competition is an IT based competition organized by iuSystem.The sole aim of this competition is to help the students to develop their creativity, critical thinking skills and help them to develop a problem solving mentality in their everyday life.</p>
+    <h3 class="competition-h"> STAGES </h3>
+    <ul class="competition-p"> 
+    <li>Knowledge Worker Stage</li>
+    <li> The Creative Stage </li>
+    </ul>
+    <h3 class="competition-h"> KNOWLEDGE WORKER STAGE </h3>
+    <p class="competition-p">At the knowledge worker stage all students that showed interest in the competition are admitted and every participants on successful registration will be given access to a training manual which costs #2000 only. The training manual will be their study guide for the competition. The Knowledge worker stage will be a CBT based aptitude test based on the content from the training manual, location and date of the exam is on the flier.  Students who score 85% and above will be qualified to move to the next stage in the competition (THE CREATIVE STAGE).</p>
+    <h3 class="competition-h"> THE CREATIVE STAGE </h3>
+    <p class="competition-p"> At the creative stage there’s no limit to the creativity of the students except the ones they placed on their imagination</p>
+    <h3 class="competition-h"> CATEGORIES </h3>
+    <P class="competition-p"> Junior School (JSS2 - JSS3) <br> Secondary School (SS1 - SS2) </P>
+    <h3 class="competition-h"> ELIGIBILITY </h3>
+    <P class="competition-p"> Only Students who are within 8-17 years of age are eligible to participate. Therefore only Secondary Schools in Nigeria and Africa are eligible.</P>
+    <h3 class="competition-h"> RESOURCES AND ANOUNCEMNETS </h3>
+    <P class="competition-p"> Resources for participants to study for this competition will be sent to individuals' mail <br> All annoucements and necessary instructions will be sent to the email address used to register for this program and all participants school. </P>
+    <h3 class="competition-h"> BENEFIT TO WINNER </h3>
+    <P class="competition-p"> Gifts/Prize <br> Gadgets <br> Trophy/Medals <br> Certificate of participation for schools </P>
+    <br/>
+    <h6 class="competition-h">Note: By clicking the "Make Payment" button means you are eligible and aware of every necessary information about this program </h6>
+    <a href="#" onclick="payWithPaystack()" class="button"> Make Payment for {{username}}</a>
+</div>
+<br/>
+<br/>
+
+
+
+<script src="https://js.paystack.co/v1/inline.js"></script> 
+
+<script>
+
+  //{% comment %} var paymentForm = document.getElementById('paymentForm');
+  //paymentForm.addEventListener('submit', payWithPaystack, false); {% endcomment %}
+
+  let payAmount = 2000
+  let email = "{{email}}"
+  ref = "{{ref}}"
+  
+  console.log(ref)
+  console.log(firstname)
+
+  function payWithPaystack() {
+    var handler = PaystackPop.setup({
+      key: '{{paystack_pub_key}}', // Replace with your public key
+      email: email,
+      amount: payAmount * 100, // the amount value is multiplied by 100 to convert to the lowest currency unit
+      currency: 'NGN', // Use GHS for Ghana Cedis or USD for US Dollars
+      ref: ref, // Replace with a reference you generated
+      callback: function(response) {
+        //this happens after the payment is completed successfully
+        var reference = response.reference;
+        alert('Payment complete! Reference: ' + reference);
+        // Make an AJAX call to your server with the reference to verify the transaction
+      },
+      onClose: function() {
+        alert('Transaction was not completed, window closed.');
+      },
+    });
+    handler.openIframe();
+  }
+
+</script>
+
+
+
+{% endblock %}

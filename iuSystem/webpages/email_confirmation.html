@@ -1,0 +1,18 @@
+{% autoescape off %}
+
+<p>Hello {{name}}! , </p>
+
+<br> Welcome to Tutorspedia.
+<br>
+<br> Thank you for registering online with Tutorspedia.
+<br> Please confirm your email by clicking on this link to <a style="border: 0; margin: 0; padding: 0; color: #556cd6 !important; text-decoration: none;" href="http://{{ domain }}{% url 'activate' uidb64=uid token=token %}"> activate your account </a>
+<br>
+<br>If you did not sign up with {{email}}, please let us know immediately by replying to this email.
+<br>You can find answers to most questions and get in touch with us at <a style="border: 0; margin: 0; padding: 0; color: #556cd6 !important; text-decoration: none;" href="http://{{domain}}/">support.tutorspedia.com</a>. We’re here to help you at any step along the way.
+<br>
+<br>Thank You,             
+<br>
+— The Tutorspedia team
+
+
+{% endautoescape %}

@@ -1,0 +1,35 @@
+{
+  "name": "tailwind-css-landing-page",
+  "version": "1.0.0",
+  "description": "A simple landing page built with Tailwind CSS and Goodcreation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/themesberg/tailwind-css-landing-page.git"
+  },
+  "keywords": [
+    "tailwind",
+    "css",
+    "Goodcreation",
+    "landing",
+    "page",
+    "css",
+    "html",
+    "responsive"
+  ],
+  "author": "https://github.com/themesberg/",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/themesberg/tailwind-css-landing-page/issues"
+  },
+  "homepage": "https://github.com/themesberg/tailwind-css-landing-page#readme",
+  "dependencies": {
+    "Goodcreation": "^1.4.7"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.1.4"
+  }
+}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %} Competition {% endblock %}
+
+{% block content %}
+        <div>
+            <h1 class="competition-h1"> iuSystem Africa Competition</h1>
+            <p class="competition-p"> iuSystem Africa Competition is an IT based competition organized by iuSystem.The sole aim of this competition is to help the students to develop their creativity, critical thinking skills and help them to develop a problem solving mentality in their everyday life.</p>
+            <h3 class="competition-h"> STAGES </h3>
+            <ul class="competition-p"> 
+            <li>Knowledge Worker Stage</li>
+            <li> The Creative Stage </li>
+            </ul>
+            <h3 class="competition-h"> KNOWLEDGE WORKER STAGE </h3>
+            <p class="competition-p">At the knowledge worker stage all students that showed interest in the competition are admitted and every participants on successful registration will be given access to a training manual which costs #2000 only. The training manual will be their study guide for the competition. The Knowledge worker stage will be a CBT based aptitude test based on the content from the training manual, location and date of the exam is on the flier.  Students who score 85% and above will be qualified to move to the next stage in the competition (THE CREATIVE STAGE).</p>
+            <h3 class="competition-h"> THE CREATIVE STAGE </h3>
+            <p class="competition-p"> At the creative stage there’s no limit to the creativity of the students except the ones they placed on their imagination</p>
+            <h3 class="competition-h"> CATEGORY </h3>
+            <P class="competition-p"> Junior School (JSS2 - JSS3) <br> Secondary School (SS1 - SS2) </P>
+            <h3 class="competition-h"> REGISTRATION PROCESS </h3>
+            <P class="competition-p"> All schools are eligible for the Competition. However, interested schools are allowed to register as many Pupils and Students as they can.</P>
+            <h3 class="competition-h"> ELIGIBILITY </h3>
+            <P class="competition-p"> Only the Pupils and Students who are 8-17 years of age are eligible to participate. This therefore only Secondary Schools in Nigeria and Africa as awhole.</P>
+            <h3 class="competition-h"> HOW TO REGISTER </h3>
+            <P class="competition-p"> Decide on the category to register <br> Make required payments. </P>
+            <h3 class="competition-h"> BENEFIT TO WINNER </h3>
+            <P class="competition-p"> Gifts/Prize <br> Gadgets <br> Trophy/Place <br> Certificate of participation for schools </P>
+            <a href="{% url "register" %}" class="button"> Register to Participate</a>
+        </div>
+        <br/>
+        <br/>
+
+{% endblock %}
